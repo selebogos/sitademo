@@ -32,6 +32,8 @@ namespace mysitaproject
             if (env.IsDevelopment())
             {
 				int length=15;
+		    int width=8;
+		    int Area=width* length;
                 app.UseDeveloperExceptionPage();
             }
             else
