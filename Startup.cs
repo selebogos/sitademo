@@ -31,6 +31,7 @@ namespace mysitaproject
         {
             if (env.IsDevelopment())
             {
+				int length=15;
                 app.UseDeveloperExceptionPage();
             }
             else
