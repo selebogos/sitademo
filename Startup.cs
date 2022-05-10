@@ -36,7 +36,7 @@ namespace mysitaproject
                 int breadth = 6;
 		        int Area=width* length;
                 int vol = length * width * breadth;
-
+		int sum=length +width+breadth;
                 app.UseDeveloperExceptionPage();
             }
             else
