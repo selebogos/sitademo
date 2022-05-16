@@ -25,7 +25,15 @@ namespace mysitaproject
         {
             services.AddRazorPages();
         }
-
+	public int SumInArray(){
+		    int[] arr = new int[] { 1, 2, 3 };
+int sum = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+    sum += arr[i];
+}
+return sum;
+	    }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -38,7 +46,7 @@ namespace mysitaproject
                 int breadth = 6;
 		        int Area=width* length;
                 int vol = length * width * breadth;
-
+		SumInArray();
                 app.UseDeveloperExceptionPage();
             }
             else
