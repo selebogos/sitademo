@@ -25,28 +25,44 @@ namespace mysitaproject
         {
             services.AddRazorPages();
         }
-	public int SumInArray(){
+	    public int SumInArray(){
 		    int[] arr = new int[] { 1, 2, 3 };
-int sum = 0;
-for (int i = 0; i < arr.Length; i++)
-{
-    sum += arr[i];
-}
-return sum;
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
 	    }
+        public bool IsPrime(int number)
+        {
+            if (number <= 1) return false;
+            if (number == 2) return true;
+            if (number % 2 == 0) return false;
+
+            var boundary = (int)Math.Floor(Math.Sqrt(number));
+
+            for (int i = 3; i <= boundary; i += 2)
+                if (number % i == 0)
+                    return false;
+
+            return true;
+        }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 int a = 0;
-		    int b=1;
+		        int b=1;
 				int length=15;
 		        int width=8;
                 int breadth = 6;
 		        int Area=width* length;
                 int vol = length * width * breadth;
-		SumInArray();
+		        SumInArray();
+                bool isPrime=IsPrime(67);
                 app.UseDeveloperExceptionPage();
             }
             else
